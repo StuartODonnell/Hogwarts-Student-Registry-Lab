@@ -9,11 +9,11 @@ get "/students" do
   @students = Student.all()
   erb(:index)
 end
-#
-# # new
-# get "/students/new" do
-#   erb(:new)
-# end
+
+# new
+get "/students/new" do
+  erb(:new)
+end
 #
 # # show - i.e. an individual order
 # get "/students/:id" do
@@ -21,12 +21,12 @@ end
 #   erb(:show)
 # end
 #
-# # create
-# post "/students" do
-#   student = Student.new(params)
-#   student.save()
-#   redirect to "/students"
-# end
+# create
+post "/students" do
+  student = Student.new(params)
+  student.save()
+  redirect to "/students"
+end
 #
 # # edit
 # get "/students/:id/edit" do
