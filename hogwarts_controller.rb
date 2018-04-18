@@ -16,11 +16,11 @@ get "/students/new" do
 end
 #
 # # show - i.e. an individual order
-# get "/students/:id" do
-#   @students = Student.find(params[:id] )
-#   erb(:show)
-# end
-#
+get "/students/:id" do
+  @students = Student.find(params[:id] )
+  erb(:show)
+end
+
 # create
 post "/students" do
   student = Student.new(params)
