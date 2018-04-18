@@ -80,4 +80,11 @@ class Student
     return result
   end
 
+  def find_house( )
+    sql = "SELECT * FROM houses WHERE id = $1"
+    values = [@house_id]
+    student = SqlRunner.run( sql, values )
+    result = House.new( student.first )
+    return result
+  end
 end
